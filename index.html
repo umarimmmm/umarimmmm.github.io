@@ -8,12 +8,14 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">{{ message }}</div>
     <script>
-      const app = new Vue({
-        el: '#app',
-        data: {
-          message: 'Hello, World'
-        }
+      import { createApp } from 'Vue'
+      const app = createApp({
+        data() {
+          return {
+            message: "Hello, World"
+          }
       })
+      app.mount('#app')
     </script>
   </body>
 </html>
