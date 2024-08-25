@@ -6,14 +6,19 @@
   </head>
   <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+      <h1>{{ message }}</h1>
+      <h2>{{ title }}</h2>
+    </div>
     <script>
       const { createApp, ref } = Vue
       createApp({
         setup() {
           const message = ref('Hello World')
+          const title = ref(22)
           return {
-            message
+            message,
+            title
           }
         }
       }).mount('#app')
